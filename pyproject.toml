@@ -1,0 +1,41 @@
+[project]
+name = "multhands-mcp"
+version = "0.1.0"
+description = "MCP server that hands online LLMs a pair of local hands: call OpenAI-compatible local inference services (KoboldCpp, Unsloth, llama.cpp server, LM Studio, Ollama, ...) for cheap text labor and vision work (analyze / OCR / compare)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["mcp", "opencode", "koboldcpp", "unsloth", "llama.cpp", "local-llm", "ocr", "vision"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "mcp>=2.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.scripts]
+multhands = "multhands.server:main"
+multhands-mcp = "multhands.server:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "asgi-lifespan>=2.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/multhands"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

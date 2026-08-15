@@ -1,0 +1,23 @@
+{
+  "defaultBackend": "koboldcpp",
+  "backends": {
+    "koboldcpp": {
+      "baseURL": "http://127.0.0.1:5001",
+      "model": "koboldcpp",
+      "capabilities": ["text", "vision"],
+      "timeoutMs": 120000,
+      "maxTokens": 8192
+    },
+    "unsloth": {
+      "baseURL": "http://127.0.0.1:8888",
+      "model": "unsloth",
+      "apiKey": "sk-unsloth-xxxxxxxx",
+      "capabilities": ["text", "vision"]
+    },
+    "llamacpp-server": {
+      "baseURL": "http://127.0.0.1:8080",
+      "model": "local-model",
+      "capabilities": ["vision"]
+    }
+  }
+}
