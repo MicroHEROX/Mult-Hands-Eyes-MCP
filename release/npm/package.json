@@ -1,0 +1,45 @@
+{
+  "name": "mult-hands-eyes-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that gives online LLMs local hands and eyes: OpenAI-compatible local inference (KoboldCpp / Unsloth / llama.cpp / LM Studio / Ollama) for cheap text work and vision work (OCR / image analysis / comparison).",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "mult-hands-eyes-mcp": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "python/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "node scripts/prepack.js",
+    "prepack": "node scripts/prepack.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "llm",
+    "local-inference",
+    "koboldcpp",
+    "unsloth",
+    "llama.cpp",
+    "lmstudio",
+    "ollama",
+    "ocr",
+    "vision",
+    "multimodal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicroHEROX/Mult-Hands-Eyes-MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MicroHEROX/Mult-Hands-Eyes-MCP/issues"
+  },
+  "homepage": "https://github.com/MicroHEROX/Mult-Hands-Eyes-MCP#readme"
+}
